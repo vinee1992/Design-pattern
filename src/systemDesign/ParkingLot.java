@@ -13,15 +13,13 @@ public class ParkingLot {
         }
     }
 
-    public boolean parkVehicle(){
+    public boolean parkVehicle(Vehicle vehicle){
         for(ParkingSpot spot : spots){
             if(spot.isAvaialble()){
-                spot.park();
-                System.out.println("Vehicle parked at spot :: " + spot.getId());
-                return true;
+               return spot.park(vehicle);
             }
         }
-        System.out.println("No available spots .");
+        System.out.println("No available spots for vehicle  ." + vehicle.getNumberPlate());
         return false;
     }
 

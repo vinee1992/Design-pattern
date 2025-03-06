@@ -2,9 +2,9 @@ package src.systemDesign;
 
 public class EntryExitGate {
 
-    public void allowEntry(ParkingLot lot){
-        System.out.println("vehicle attempting to enter ...");
-        lot.parkVehicle();
+    public void allowEntry(ParkingLot lot,Vehicle vehicle){
+        System.out.println("vehicle " + vehicle.getNumberPlate()+ " attempting to enter ...");
+        lot.parkVehicle(vehicle);
 
     }
 

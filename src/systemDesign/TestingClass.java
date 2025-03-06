@@ -6,11 +6,11 @@ public class TestingClass {
 
         ParkingLot lot = new ParkingLot(3);
         EntryExitGate gate =new EntryExitGate();
-        gate.allowEntry(lot);
-        gate.allowEntry(lot);
-        gate.allowEntry(lot);
+        Vehicle v1= new Vehicle("TN14F7756");
+        Vehicle v2= new Vehicle("TN14F7750");
+        gate.allowEntry(lot,v1);
+        gate.allowEntry(lot,v2);
         gate.allowExit(lot,2);
-        gate.allowEntry(lot);
     }
 
 }
